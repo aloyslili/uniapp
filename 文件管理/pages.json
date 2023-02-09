@@ -1,0 +1,107 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	{
+		"path" : "pages/login/login",
+		"style": {
+			// "navigationBarTitleText": "首页"
+			"app-plus": {
+				// 取消原生导航栏
+				"titleNView": false
+			}
+		}
+	},
+		{
+			"path": "pages/index/index",
+			"style": {
+				// "navigationBarTitleText": "首页"
+				"app-plus": {
+					// 取消原生导航栏
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/list/list",
+			"style": {
+				"navigationBarTitleText": "传输列表",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"color": "#333333",
+								"colorPressed": "#009CFF",
+								"float": "right",
+								"fontSize": "22px",
+								"fontSrc":"/static/iconfont.ttf",
+								"text": "\ue64a"
+							}
+						]
+					}
+				}
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		}
+	    ,
+		{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "设置"
+			}
+		},
+		{
+            "path" : "pages/video/video",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "文件管理",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	// 底部导航栏的配置
+	"tabBar": {
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"color": "#DBDBDB",
+		// 选中颜色
+		"selectedColor": "#009CFF",
+		"list": [
+			{
+				// 图标路劲
+				"iconPath": "static/tabbar/index1.png",
+				// 选中图标路劲
+				"selectedIconPath": "static/tabbar/index1-selected.png",
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				// 图标路劲
+				"iconPath": "static/tabbar/list.png",
+				// 选中图标路劲
+				"selectedIconPath": "static/tabbar/list-select.png",
+				// 相应页面路径
+				"pagePath": "pages/list/list",
+				"text": "传输"
+			},
+			{
+				// 图标路劲
+				"iconPath": "static/tabbar/my.png",
+				// 选中图标路劲
+				"selectedIconPath": "static/tabbar/my-selected.png",
+				"pagePath": "pages/my/my",
+				"text": "我的"
+			}
+		]
+	}
+}

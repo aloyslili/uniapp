@@ -1,0 +1,121 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https				://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "百事百科",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					// 隐藏滚动条
+					"scrollIndicator": "none",
+					// 顶部窗口动画效果 导航栏 搜索框配置
+					"titleNView": {
+						// "autoBackButton":"true", 
+						// 头部搜索
+						"searchInput":{  //搜索框
+							"placeholder": "百事百科",
+							"borderRadius":"4px",
+							"backgroundColor": "#F7F7F7",
+							"align":"left"  , //对齐方式
+							"placeholderColor": "#CCCCCC",
+							"disabled": false
+						},
+						"buttons": [{
+							"text": "\ue609",  //图标
+							"fontSrc": "/static/font/iconfont.ttf",
+							// "text": "返回",
+							"float":"left",   //控制标题显示的左右位置,"float":"left"就在搜索框右边了
+							"fontSize":"22px",
+							"fontWeight":"bold",
+							// "width":"auto",   //这个一定要加
+							"color": "#FFFF00",
+							"colorPressed": "#BBBBBB"
+							 
+						},
+						{
+							"text": "\ue653",   //图标
+							"fontSrc": "/static/font/iconfont.ttf",
+							// "text": "返回",
+							"float":"right",   //控制标题显示的左右位置,"float":"left"就在搜索框右边了
+							"fontSize":"22px",
+							"fontWeight":"bold",
+							// "width":"auto",   //这个一定要加
+							"color": "#000000",
+							"colorPressed": "#FFFF00"
+						}]
+					}
+				}
+			}
+		}, {
+			"path": "pages/news/news",
+			"style": {
+				"navigationBarTitleText": "百事百科",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/paper/paper",
+			"style": {
+				"navigationBarTitleText": "百事百科",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": "百事百科",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"globalStyle": {
+		// 标题背景颜色
+		"navigationBarTextStyle": "black",
+		// 标题
+		"navigationBarTitleText": "百事百科",
+		// 导航栏颜色
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	// 底部导航
+	"tabBar": {
+		"color": "#B5B5B5",
+		"selectedColor": "#FEE42B",
+		"borderStyle": "black",
+		"backgroundColor": "#FFFFFF",
+		"list": [{
+			// 首页
+			"pagePath": "pages/index/index",
+			// 标题
+			"text": "糗事",
+			// 标题
+			"iconPath": "/static/tabbar/index.png",
+			"selectedIconPath": "/static/tabbar/indexed.png"
+		}, {
+			// 首页
+			"pagePath": "pages/news/news",
+			// 标题
+			"text": "动态",
+			// 标题
+			"iconPath": "/static/tabbar/news.png",
+			"selectedIconPath": "/static/tabbar/newsed.png"
+		}, {
+			// 首页
+			"pagePath": "pages/paper/paper",
+			// 标题
+			"text": "小纸条",
+			// 标题
+			"iconPath": "/static/tabbar/paper.png",
+			"selectedIconPath": "/static/tabbar/papered.png"
+		}, {
+			// 首页
+			"pagePath": "pages/home/home",
+			// 标题
+			"text": "我的",
+			// 标题
+			"iconPath": "/static/tabbar/home.png",
+			"selectedIconPath": "/static/tabbar/homed.png"
+		}]
+	},
+	"uniIdRouter": {}
+}
