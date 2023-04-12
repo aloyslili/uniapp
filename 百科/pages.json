@@ -43,7 +43,7 @@
 			"path": "pages/news/news",
 			"style": {
 				// 自定义导航
-				"app-plus":{
+				"app-plus": {
 					"titleNView": false,
 					// 关闭反弹效果
 					"bounce": "none"
@@ -52,6 +52,8 @@
 		}, {
 			"path": "pages/paper/paper",
 			"style": {
+				// 下拉刷新
+				"enablePullDownRefresh": true,
 				"navigationBarTitleText": "小纸条",
 				"app-plus": {
 					"titleNView": {
@@ -80,7 +82,46 @@
 			}
 		}, {
 			"path": "pages/home/home",
-			"style": {}
+			// 搜索框设置
+			"style": {
+				"app-plus": {
+					"scrollIndicator": "none", //隐藏滚动条
+					"titleNView": {
+						"autoBackButton": false,
+						// 搜索框配置
+						"searchInput": {
+							// 原生搜索框配置
+							"align": "left",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "搜索糗事",
+							"placeholderColor": "#CCCCCC",
+							"disabled": false
+						},
+						//配置按钮
+						"buttons": [
+							// 左边
+							// {
+							// 	"color": "#FF9619",
+							// 	"colorPressed": "#BBBBBB",
+							// 	"float": "left",
+							// 	"fontSize": "22px",
+							// 	"fontSrc": "/static/font/icon.ttf",
+							// 	"text": "\ue609"
+							// },
+							// 右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "16px",
+								// "fontSrc": "/static/font/icon.ttf",
+								"text": "取消"
+							}
+						]
+					}
+				}
+			}
 		},
 		{
 			"path": "pages/search/search",
@@ -133,47 +174,106 @@
 					"titleNView": false
 				}
 			}
-		}
-	    ,{
-            "path" : "components/news/news",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/topic-nav/topic-nav",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "话题分类",
-                "enablePullDownRefresh": false,
+		}, {
+			"path": "pages/news/news",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/topic-nav/topic-nav",
+			"style": {
+				"navigationBarTitleText": "话题分类",
+				"enablePullDownRefresh": false,
 				"app-plus": {
 					"bounce": "none"
 				}
-            }
-            
-        }
-        ,{
-            "path" : "pages/topic-detail/topic-detail",
-            "style" :                                                                           
+			}
+
+		},
+		{
+			"path": "pages/user-list/user-list",
+			"style": {
+				"app-plus": {
+					"animationType": "slide-in-left", //进场动画
+					"scrollIndicator": "none", //隐藏滚动条
+					"titleNView": {
+						"autoBackButton": false,
+						// 搜索框配置
+						"searchInput": {
+							"align": "left",
+							"backgroundColor": "#F7F7F7",
+							"borderRadius": "4px",
+							"placeholder": "搜索糗事",
+							"placeholderColor": "#CCCCCC",
+							"disabled": false
+						},
+						//配置按钮
+						"buttons": [
+							// 左边
+							// {
+							// 	"color": "#FF9619",
+							// 	"colorPressed": "#BBBBBB",
+							// 	"float": "left",
+							// 	"fontSize": "22px",
+							// 	"fontSrc": "/static/font/icon.ttf",
+							// 	"text": "\ue609"
+							// },
+							// 右边
+							{
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "16px",
+								// "fontSrc": "/static/font/icon.ttf",
+								"text": "取消"
+							}
+						]
+					}
+				}
+			}
+
+		}, {
+			"path": "pages/topic-detail/topic-detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": true, //开启下拉刷新
+				"app-plus": {
+					// 隐藏滚动条
+					"scrollIndicator": "none",
+					"titleNView": {
+						// 透明渐变
+						"type": "transparent",
+						"buttons": [{
+							"type": "menu"
+						}]
+					}
+				}
+			}
+
+		}
+	    ,{
+            "path" : "pages/user-chat/user-chat",
+            "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": true, //开启下拉刷新
-						"app-plus": {
-							// 隐藏滚动条
-							"scrollIndicator": "none",
-							"titleNView": {
-								// 透明渐变
-								"type": "transparent",
-								"buttons": [
-									{
-										"type": "menu"
-									}
-								]
+                "enablePullDownRefresh": false,
+				"navigationBarTextStyle": "聊天页",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								// 右边
+								"color": "#000000",
+								"colorPressed": "#BBBBBB",
+								"float": "right",
+								"fontSize": "16px",
+								"text": "\ue628"
 							}
-						}
+						]
+					}
+				}
             }
             
         }

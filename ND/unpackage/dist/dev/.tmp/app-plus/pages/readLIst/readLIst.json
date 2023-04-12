@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "page-title": "/components/pageTitle",
+    "book-list": "/components/bookList"
+  }
+}

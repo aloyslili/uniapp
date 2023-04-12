@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "search-box": "/components/searchBox",
+    "rotation-chart": "/components/rotationChart",
+    "function-sort": "/components/functionSort",
+    "list-header": "/components/listHeader",
+    "recommond": "/components/compound/recommond",
+    "book-list": "/components/bookList"
+  }
+}

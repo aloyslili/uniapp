@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "my-icon": "/components/myIcon",
+    "list-header": "/components/listHeader"
+  },
+  "component": true
+}
